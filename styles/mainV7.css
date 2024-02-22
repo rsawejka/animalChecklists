@@ -1,0 +1,24 @@
+/* body{
+    background-color: orange;
+} */
+.RSBold{
+    font-weight: bold;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* @media only screen and (max-width: 800px) {
+.showOnDesktop a, .showOnDesktop form{
+    display: none;
+}
+} */
+@media print {
+    .noprint {
+       display: none;
+    }
+ }
+
+
+
