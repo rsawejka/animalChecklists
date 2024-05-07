@@ -7,7 +7,9 @@ $post = true;
 $data = "https://employeeportal.hawspets.org/checklists/animal.php?SBID=$SBID";
 $size = "500x500";
 $color = "0000ff";
-$qr = 'https://chart.googleapis.com/chart?cht=qr&chs='.$size.'&chl='.$data.'&chco='.$color;
+//$qr = 'https://chart.googleapis.com/chart?cht=qr&chs='.$size.'&chl='.$data//.'&chco='.$color;
+
+$qr = 'https://api.qrserver.com/v1/create-qr-code/?size=' . $size . '&data=' . $data;
 
 
 
