@@ -202,12 +202,34 @@ if(isset($_POST['checkBoxSubmit'])){
 
 <?php
 //echo $_POST['activateDeactivate'];
+if(isset($_POST['updateNameButton'])){
 
+  
+  $NameQuery = "UPDATE `RS_checkListsAnimals` SET `name` = ? WHERE `RS_checkListsAnimals`.`SBID` = $SBID";
+  $stmt = mysqli_prepare($db, $NameQuery) or die('Error in queryaaa.');
+
+
+  mysqli_stmt_bind_param($stmt, "s",  $_POST["updateName"]);
+
+
+  $result = mysqli_stmt_execute($stmt) or die('Error executing query.');
+
+
+  if(mysqli_affected_rows($db)){
+     echo "done";
+     header("Location: animal.php?SBID=" . $SBID);
+      
+  }else{
+      // let the user know
+      echo "SOMETHING WENT WRONGgg";
+  }
+
+}
 ?>
 <div class="container">
 <div class="row">
 <h1><?= $SBID ?></h1>
-<h2><?=  $animal['name'] ?></h2>
+<form method="post" class="d-flex"><input class="btn btn-success " type="submit" name="updateNameButton" id="updateNameButton" value="Update Name"><input class="form-control-lg border-0" type="text" id="updateName" name="updateName" value="<?=  $animal['name'] ?>"></form>
 </div>
 
 </div>
