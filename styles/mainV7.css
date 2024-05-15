@@ -19,6 +19,10 @@
        display: none;
     }
  }
-
+.active-list-deactivate{
+    border: none;
+    background-color: none;
+    color: red;
+}
 
 

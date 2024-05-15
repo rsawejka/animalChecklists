@@ -43,7 +43,7 @@ $peeCheckArrayPM = array();
 $dryCheckArrayPM = array();
 $wetCheckArrayPM = array();
 $vomitCheckArrayPM = array();
-$checkqueryPM = "SELECT `date`, `dry`, `wet`, `stools`, `urine`, `vomiting`, `behavior`, `SBID`, `comments`, `initials` FROM `RS_checkListsAM` WHERE SBID = '$SBID'  ORDER BY `id` DESC LIMIT 3 ";
+$checkqueryPM = "SELECT `date`, `dry`, `wet`, `stools`, `urine`, `vomiting`, `behavior`, `SBID`, `comments`, `initials` FROM `RS_checkListsPM` WHERE SBID = '$SBID'  ORDER BY `id` DESC LIMIT 3 ";
 
 // execute query
 $checkqueryresultPM = mysqli_query($db, $checkqueryPM) or die('Error loading animal. pm');
@@ -73,24 +73,24 @@ while($row2 = mysqli_fetch_array($checkqueryresultPM, MYSQLI_ASSOC)){
         <?php
         echo "<h6>Stool last 3 days: </h6>";
         echo "<div>" . $poopCheckArrayAM[0][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $poopCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $poopCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
+        echo "<div>" . $poopCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[1][1] .  "</div>";
+        echo "<div>" . $poopCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[2][1] .  "</div>";
         echo "<h6>Urine last 3 days: </h6>";
         echo "<div>" . $peeCheckArrayAM[0][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $peeCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $peeCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
+        echo "<div>" . $peeCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[1][1] .  "</div>";
+        echo "<div>" . $peeCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[2][1] .  "</div>";
         echo "<h6>Dry food habits the last 3 days: </h6>";
         echo "<div>" . $dryCheckArrayAM[0][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $dryCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $dryCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
+        echo "<div>" . $dryCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[1][1] .  "</div>";
+        echo "<div>" . $dryCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[2][1] .  "</div>";
         echo "<h6>Wet food habits the last 3 days: </h6>";
         echo "<div>" . $wetCheckArrayAM[0][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $wetCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $wetCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
+        echo "<div>" . $wetCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[1][1] .  "</div>";
+        echo "<div>" . $wetCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[2][1] .  "</div>";
         echo "<h6>Vomit in the last 3 days: </h6>";
         echo "<div>" . $vomitCheckArrayAM[0][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $vomitCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
-        echo "<div>" . $vomitCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[0][1] .  "</div>";
+        echo "<div>" . $vomitCheckArrayAM[1][0] . " | " . $poopCheckArrayAM[1][1] .  "</div>";
+        echo "<div>" . $vomitCheckArrayAM[2][0] . " | " . $poopCheckArrayAM[2][1] .  "</div>";
         ?>
         </div>
         <div>
@@ -98,24 +98,24 @@ while($row2 = mysqli_fetch_array($checkqueryresultPM, MYSQLI_ASSOC)){
                 <?php
                          echo "<h6>Stool last 3 days: </h6>";
                          echo "<div>" . $poopCheckArrayPM[0][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $poopCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $poopCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
+                         echo "<div>" . $poopCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[1][1] .  "</div>";
+                         echo "<div>" . $poopCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[2][1] .  "</div>";
                          echo "<h6>Urine last 3 days: </h6>";
                          echo "<div>" . $peeCheckArrayPM[0][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $peeCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $peeCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
+                         echo "<div>" . $peeCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[1][1] .  "</div>";
+                         echo "<div>" . $peeCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[2][1] .  "</div>";
                          echo "<h6>Dry food habits the last 3 days: </h6>";
                          echo "<div>" . $dryCheckArrayPM[0][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $dryCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $dryCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
+                         echo "<div>" . $dryCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[1][1] .  "</div>";
+                         echo "<div>" . $dryCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[2][1] .  "</div>";
                          echo "<h6>Wet food habits the last 3 days: </h6>";
                          echo "<div>" . $wetCheckArrayPM[0][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $wetCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $wetCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
+                         echo "<div>" . $wetCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[1][1] .  "</div>";
+                         echo "<div>" . $wetCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[2][1] .  "</div>";
                          echo "<h6>Vomit in the last 3 days: </h6>";
                          echo "<div>" . $vomitCheckArrayPM[0][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $vomitCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
-                         echo "<div>" . $vomitCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[0][1] .  "</div>";
+                         echo "<div>" . $vomitCheckArrayPM[1][0] . " | " . $poopCheckArrayPM[1][1] .  "</div>";
+                         echo "<div>" . $vomitCheckArrayPM[2][0] . " | " . $poopCheckArrayPM[2][1] .  "</div>";
                 ?>
         </div>
       </div>

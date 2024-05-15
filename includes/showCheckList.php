@@ -227,7 +227,6 @@ while($PM_row = mysqli_fetch_array($PM_result, MYSQLI_ASSOC)){
         <select name="dryAM" id="dryAM" class="col-12">
   <option <?php if($displayDryAM=="") echo 'selected="selected"'; ?> value=""></option>
   <option <?php if($displayDryAM=="Normal") echo 'selected="selected"'; ?> value="Normal">Normal</option>
-  <option <?php if($displayDryAM=="Nibbling") echo 'selected="selected"'; ?> value="Nibbling">Nibbling</option>
   <option <?php if($displayDryAM=="Not eating") echo 'selected="selected"'; ?> value="Not eating">Not eating</option>
 </select>
      
@@ -237,7 +236,6 @@ while($PM_row = mysqli_fetch_array($PM_result, MYSQLI_ASSOC)){
         <select name="wetAM" id="wetAM" class="col-12">
   <option <?php if($displayWetAM=="") echo 'selected="selected"'; ?> value=""></option>
   <option <?php if($displayWetAM=="Normal") echo 'selected="selected"'; ?> value="Normal">Normal</option>
-  <option <?php if($displayWetAM=="Nibbling") echo 'selected="selected"'; ?> value="Nibbling">Nibbling</option>
   <option <?php if($displayWetAM=="Extra bowl") echo 'selected="selected"'; ?> value="Extra bowl">Extra bowl</option>
   <option <?php if($displayWetAM=="Not eating") echo 'selected="selected"'; ?> value="Not eating">Not eating</option>
 </select>
@@ -368,7 +366,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <select name="dryPM" id="dryPM" class="col-12">
   <option <?php if($displayDryPM=="") echo 'selected="selected"'; ?> value=""></option>
   <option <?php if($displayDryPM=="Normal") echo 'selected="selected"'; ?> value="Normal">Normal</option>
-  <option <?php if($displayDryPM=="Nibbling") echo 'selected="selected"'; ?> value="Nibbling">Nibbling</option>
   <option <?php if($displayDryPM=="Not eating") echo 'selected="selected"'; ?> value="Not eating">Not eating</option>
 </select>
      
@@ -378,7 +375,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <select name="wetPM" id="wetPM" class="col-12">
   <option <?php if($displayWetPM=="") echo 'selected="selected"'; ?> value=""></option>
   <option <?php if($displayWetPM=="Normal") echo 'selected="selected"'; ?> value="Normal">Normal</option>
-  <option <?php if($displayWetPM=="Nibbling") echo 'selected="selected"'; ?> value="Nibbling">Nibbling</option>
   <option <?php if($displayWetPM=="Extra bowl") echo 'selected="selected"'; ?> value="Extra bowl">Extra bowl</option>
   <option <?php if($displayWetPM=="Not eating") echo 'selected="selected"'; ?> value="Not eating">Not eating</option>
 </select>
